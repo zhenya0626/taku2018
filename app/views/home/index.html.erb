@@ -1,0 +1,39 @@
+<% if user_signed_in? %>
+<div class="nav_bar">
+    <div id="nav-drawer">
+        <input id="nav-input" type="checkbox" class="nav-unshown">
+        <label id="nav-open" for="nav-input"><span></span></label>
+        <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+        <div id="nav-content">
+            <%= image_tag('map.png', :class => "user_icon") %>
+            <%= current_user.username %>
+            <div><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></div>
+        </div>
+    </div>
+    <span class="menu_text">ホーム</span>
+    <span class="to_arrange"></span>
+</div>
+<div class="contents">
+    <div class="map_area">
+        <%= image_tag('map.png', :class => "map_img") %>
+        <div class="building kobo"><%= link_to "工房棟", :controller => "buildings", :action => "show", :id => 2 %></div>
+        <div class="building kenkyu"><%= link_to "研究棟", :controller => "buildings", :action => "show", :id => 3 %></div>
+        <div class="building kanri"><%= link_to "管理棟", :controller => "buildings", :action => "show", :id => 4 %></div>
+        <div class="building toshokan"><%= link_to "図書館棟", :controller => "buildings", :action => "show", :id => 5 %></div>
+        <div class="building geijutukougaku"><%= link_to "芸術工学棟", :controller => "buildings", :action => "show", :id => 6 %></div>
+        <div class="building shokudou"><%= link_to "食堂", :controller => "buildings", :action => "show", :id => 7 %></div>
+        <div class="building sports"><%= link_to "スポーツコート", :controller => "buildings", :action => "show", :id => 8 %></div>
+
+    </div>
+    <div class="friends_area">
+        <ul class="friends_ul">
+            <% @users.each do |user| %>
+            <li class="friends_li">
+                <%= image_tag('map.png', :class => "user_icon") %>
+                <span class="username"><%=user.username %></span>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+</div>
+<% end %>

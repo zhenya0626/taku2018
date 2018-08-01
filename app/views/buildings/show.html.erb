@@ -1,0 +1,25 @@
+<div class="nav_bar">
+    <span class="nav_link"><%= link_to '<',  :controller => "home", :action => "index"  %></span>
+    <span class="menu_text"><%= @building.name %></span>
+    <span></span>
+</div>
+
+<div class="contents">
+<% (1..@building.storey).each do |n| %>
+<div class="floor_title"><%= n %>階</div> 
+<ul class="floor_list">
+<% @locations.each do |location| %>
+    <% if n == location.floor %>
+    <li class="room">
+    <div class="room_name"><%= location.room %></div>
+    <div class="room_name"><%= location.id %></div>
+    <% @users.each do |user| %>
+        <div><%= user.username%></div>
+    <% end %>
+    </li>
+    <% end %>
+<% end %>
+</ul>
+<% end %>
+</div>
+

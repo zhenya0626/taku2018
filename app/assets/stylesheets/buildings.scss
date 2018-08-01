@@ -1,0 +1,45 @@
+// Place all the styles related to the buildings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.nav_bar{
+	width: 100%;
+	background: #FFDE31;
+	height: 4rem;
+	line-height: 4rem;
+	text-align: center;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    .menu_text{
+        text-align: center;
+    }
+    .nav_link{
+        margin-left: 11px;
+        font-size: 1rem;
+        a{
+            text-decoration: none;
+            color: #123456;
+        }
+    }
+}
+.contents{
+    .floor_list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        .room{
+            background: white;
+            border-bottom: 1px solid #d9d9d9;
+            .room_name{
+                text-align: center;
+            }
+        }
+    }
+    .floor_title{
+        background: #1b4c7d;
+        color: #ececec;
+        text-align: center;
+        height: 2rem;
+        line-height: 2rem;
+    }
+}
