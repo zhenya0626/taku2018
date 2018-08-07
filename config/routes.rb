@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'building/:id/show' => "buildings#show"
-  post 'building/:location_id' => "buildings#enter" , as: 'location_id_path'
+  post 'building/:location_id/:building_id' => "buildings#enter" , as: 'location_id'
   # get 'home/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/' => "home#index"

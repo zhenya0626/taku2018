@@ -8,6 +8,7 @@
             <%= image_tag('map.png', :class => "user_icon") %>
             <%= current_user.username %>
             <div><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></div>
+            <div>locationid: <%= current_user.location_id %></div>
         </div>
     </div>
     <span class="menu_text">ホーム</span>
@@ -15,7 +16,7 @@
 </div>
 <div class="contents">
     <div class="map_area">
-        <%= image_tag('map.png', :class => "map_img") %>
+        <%= image_tag('map.svg', :class => "map_img") %>
         <div class="building kobo"><%= link_to "工房棟", :controller => "buildings", :action => "show", :id => 2 %></div>
         <div class="building kenkyu"><%= link_to "研究棟", :controller => "buildings", :action => "show", :id => 3 %></div>
         <div class="building kanri"><%= link_to "管理棟", :controller => "buildings", :action => "show", :id => 4 %></div>
