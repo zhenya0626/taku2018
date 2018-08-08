@@ -4,9 +4,10 @@
     <span></span>
 </div>
 <div>編集だべさ</div>
-<%= form_tag(user_update_path(@user.id), method: :post) do %>
+<%= form_tag(user_update_path(@user.id), method: :post, multipart: true) do %>
     <div class="user_edit_form">
-        <%= image_tag('map.png', :class => "user_icon") %>
+    <%= image_tag("/user_images/#{@user.icon_image_name}", :class => "user_icon") %>
+        <input name="image" type="file">
         <div>芸工ネーム:</div>
         <textarea name="username"><%= @user.username %></textarea>
 

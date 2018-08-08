@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_08_110643) do
+ActiveRecord::Schema.define(version: 2018_08_08_125106) do
 
   create_table "buildings", force: :cascade do |t|
     t.string "name", null: false
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_110643) do
     t.integer "student_number"
     t.string "comment"
     t.integer "location_id"
+    t.string "icon_image_name", default: "default.jpg"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -3,7 +3,7 @@
     <span class="menu_text"><%= @user.username %></span>
     <span></span>
 </div>
-<%= image_tag('map.png', :class => "user_icon") %>
+<%= image_tag("/user_images/#{@user.icon_image_name}", :class => "user_icon") %>
 <div>芸工ネーム:<%= @user.username %></div>
 <div>学籍番号:<%= @user.student_number %></div> 
 <div>場所:<%= @user.location.room %></div>

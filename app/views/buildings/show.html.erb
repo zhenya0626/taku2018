@@ -16,7 +16,7 @@
     <% @users.each do |user| %>
         <% if user.location_id == location.id %>
             <div class="user">
-                <%= image_tag('map.png', :class => "user_icon") %>
+                <%= image_tag("/user_images/#{user.icon_image_name}", :class => "user_icon") %>
                 <span class="users"><%= user.username%></span>
             </div> 
         <% end %>
