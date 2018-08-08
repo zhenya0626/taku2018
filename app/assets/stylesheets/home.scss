@@ -65,6 +65,7 @@ transition: .3s ease-in-out;
 
 /*中身*/
 #nav-content {
+padding: 1rem;
 overflow: auto;
 position: fixed;
 top: 0;
@@ -77,10 +78,19 @@ background: #fff;/*背景色*/
 transition: .3s ease-in-out;/*滑らかに表示*/
 -webkit-transform: translateX(-105%);
 transform: translateX(-105%);/*左に隠しておく*/
-.user_icon{
-    width:3rem;
-    height:3rem;
-    border-radius: 30px;
+.icon_username{
+    line-height: 1;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    .username{
+        margin-left: 1.5rem;
+    }
+    .user_icon{
+        width:3rem;
+        height:3rem;
+        border-radius: 30px;
+    }
 }
 }
 
@@ -121,38 +131,45 @@ box-shadow: 6px 0 25px rgba(0,0,0,.15);
         }
         .building.kobo{
             position: absolute;
-            top: 6rem;
-            left: 10vh;
+            top: calc(4rem + 9vw);
+            left: 19vw;
         }
         .building.kenkyu{
             position: absolute;
-            top: 10rem;
-            left: 10vh;
+            top: calc(4rem + 28.5vw);
+            left: 24.5vw;
         }
         .building.kanri{
             position: absolute;
-            top: 15rem;
-            left: 10vh;
+            top: calc(4rem + 54.5vw);
+            left: 24.5vw;
         }
         .building.toshokan{
             position: absolute;
-            top: 20rem;
-            left: 10vh;
+            top: calc(4rem + 77.5vw);
+            left: 21vw;
         }
         .building.geijutukougaku{
             position: absolute;
-            top: 7rem;
-            right: 10vw;
+            top: calc(4rem + 16vw);
+            right: 19vw;
         }
         .building.shokudou{
             position: absolute;
-            top: 14rem;
-            right: 12vw;
+            top: calc(4rem + 50vw);
+            right: 14vw;
         }
         .building.sports{
             position: absolute;
-            top: 19rem;
-            right: 3vw;
+            top: calc(4rem + 76vw);
+            right: 9.5vw;
+        }
+        a{
+            color: #004181;
+            text-decoration: none;
+            font-size: 0.7rem;
+            cursor: pointer;
+
         }
     }
     .friends_area{

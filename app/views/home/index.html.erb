@@ -5,10 +5,14 @@
         <label id="nav-open" for="nav-input"><span></span></label>
         <label class="nav-unshown" id="nav-close" for="nav-input"></label>
         <div id="nav-content">
-            <%= image_tag('map.png', :class => "user_icon") %>
-            <%= current_user.username %>
+            <div class="icon_username">
+                <%= image_tag('map.png', :class => "user_icon") %>
+                <span class="username"><%= current_user.username %></span>
+            </div>
+            
+           
+            <div><%= @location_room %></div>
             <div><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></div>
-            <div>locationid: <%= current_user.location_id %></div>
         </div>
     </div>
     <span class="menu_text">ホーム</span>
@@ -32,6 +36,8 @@
             <li class="friends_li">
                 <%= image_tag('map.png', :class => "user_icon") %>
                 <span class="username"><%=user.username %></span>
+                <span class="username"><%=user.location.room %></span>
+
             </li>
             <% end %>
         </ul>
