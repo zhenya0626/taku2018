@@ -1,0 +1,16 @@
+<div class="nav_bar">
+    <span class="nav_link"><%= link_to '<',  :controller => "home", :action => "index"  %></span>
+    <span class="menu_text"><%= @user.username %></span>
+    <span></span>
+</div>
+<%= image_tag('map.png', :class => "user_icon") %>
+<div>芸工ネーム:<%= @user.username %></div>
+<div>学籍番号:<%= @user.student_number %></div> 
+<div>場所:<%= @user.location.room %></div>
+<div>コメント:<%= @user.comment %></div>
+
+<% if current_user.id == @user.id %>
+    <div><%= link_to('編集',user_edit_path(id: current_user.id))%></div>
+<% end %>
+
+

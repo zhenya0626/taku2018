@@ -176,6 +176,9 @@ box-shadow: 6px 0 25px rgba(0,0,0,.15);
     .friends_area{
         width: 100vw;
         background: white;
+        a{
+            text-decoration: none ;
+        }
         .friends_ul{
             list-style: none;
             margin: 0;
@@ -186,6 +189,10 @@ box-shadow: 6px 0 25px rgba(0,0,0,.15);
                 align-items: center;
                 border-bottom: 1px solid #7d7c7c2e;
                 padding: 1rem;
+                span{
+                    color: #000000c4;
+                    text-decoration: none;
+                }
             }
         }
         .user_icon{

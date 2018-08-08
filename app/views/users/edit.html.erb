@@ -1,0 +1,22 @@
+<div class="nav_bar">
+    <span class="nav_link"><%= link_to '<',  :controller => "home", :action => "index"  %></span>
+    <span class="menu_text"><%= @user.username %></span>
+    <span></span>
+</div>
+<div>編集だべさ</div>
+<%= form_tag(user_update_path(@user.id), method: :post) do %>
+    <div class="user_edit_form">
+        <%= image_tag('map.png', :class => "user_icon") %>
+        <div>芸工ネーム:</div>
+        <textarea name="username"><%= @user.username %></textarea>
+
+        <div>学籍番号:</div>
+        <textarea name="student_number"><%= @user.student_number %></textarea>
+        
+        <div>コメント:</div>
+        <textarea name="comment"><%= @user.comment %></textarea>
+        <input type="submit" value="保存">
+    </div>
+<% end %>
+
+

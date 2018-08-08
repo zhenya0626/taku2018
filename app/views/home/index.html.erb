@@ -13,6 +13,8 @@
            
             <div><%= @location_room %></div>
             <div><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></div>
+            <div><%= link_to('編集',user_edit_path(id: current_user.id))%></div>
+            
         </div>
     </div>
     <span class="menu_text">ホーム</span>
@@ -33,12 +35,14 @@
     <div class="friends_area">
         <ul class="friends_ul">
             <% @users.each do |user| %>
-            <li class="friends_li">
-                <%= image_tag('map.png', :class => "user_icon") %>
-                <span class="username"><%=user.username %></span>
-                <span class="username"><%=user.location.room %></span>
+                <%= link_to(user_show_path(id: user.id)) do %>
+                    <li class="friends_li">
+                        <%= image_tag('map.png', :class => "user_icon") %>
+                        <span class="username"><%=user.username %></span>
+                        <span class="username"><%=user.location.room %></span>
 
-            </li>
+                    </li>
+                <% end %>
             <% end %>
         </ul>
     </div>
