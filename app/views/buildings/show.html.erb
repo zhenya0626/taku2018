@@ -1,30 +1,33 @@
 <div class="nav_bar">
-    <span class="nav_link"><%= link_to '<',  :controller => "home", :action => "index"  %></span>
+    <span class="nav_link"><%= link_to 'back',  :controller => "home", :action => "index"  %></span>
     <span class="menu_text"><%= @building.name %></span>
     <span></span>
 </div>
 
 <div class="contents">
-<% (1..@building.storey).each do |n| %>
-<div class="floor_title"><%= n %>階</div> 
-<ul class="floor_list">
-<% @locations.each do |location| %>
-    <% if n == location.floor %>
-    <li class="room">
-    <div class="room_name"><%= location.room %><%= link_to '入る',  location_id_path(location_id:location.id, building_id: @building.id) , :method => :post %></div>
-    
-    <% @users.each do |user| %>
-        <% if user.location_id == location.id %>
-            <div class="user">
-                <%= image_tag("/user_images/#{user.icon_image_name}", :class => "user_icon") %>
-                <span class="users"><%= user.username%></span>
-            </div> 
+        <% (1..@building.storey).each do |n| %>
+            <div class="floor">
+                <div class="floor_title"><%= n %>階</div> 
+                <ul class="floor_list">
+                <% @locations.each do |location| %>
+                    <% if n == location.floor %>
+                    <li class="room">
+                    <div class="room_name"><%= location.room %><%= link_to 'enter',  location_id_path(location_id:location.id, building_id: @building.id) , :method => :post %></div>
+                    
+                    <% @users.each do |user| %>
+                        <% if user.location_id == location.id %>
+                            <div class="user">
+                                <%= image_tag("/user_images/#{user.icon_image_name}", :class => "user_icon") %>
+                                <span class="users"><%= user.username%></span>
+                            </div> 
+                        <% end %>
+                    <% end %>
+                    </li>
+                    <% end %>
+                <% end %>
+                </ul>
+            </div>
         <% end %>
-    <% end %>
-    </li>
-    <% end %>
-<% end %>
-</ul>
-<% end %>
+    </div>
 </div>
 

@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .nav_bar{
+    color: #ffffffdd;
 	width: 100%;
 	background: #FFDE31;
 	height: 4rem;
@@ -10,6 +11,7 @@
     font-size: 1.3rem;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 1px 4px 0px #a0a0a0;
     .menu_text{
         text-align: center;
     }
@@ -18,56 +20,64 @@
         font-size: 1rem;
         a{
             text-decoration: none;
-            color: #123456;
+            color: #ffffffdd;
         }
     }
 }
+
 .contents{
-    .floor_list{
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        .room{
-            background: white;
-            border-bottom: 1px solid #d9d9d9;
-            .room_name{
-                text-align: center;
-                display: flex;
-                justify-content: space-between;
-                background: #00000030;
-                padding: 0.6rem;
-                align-items: center;
-                a{
-                    text-decoration: none;
-                    color: white;
-                    background: #ababab;
-                    border: 1px solid #0000003d;
-                    border-radius: 6px;
-                    padding: 0.3rem 0.7rem;
-                }
-            }
-            .user{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0.5rem 1rem;
-                .user_icon{
-                    width: 3rem;
-                    height: 3rem;
-                    border-radius: 30px;
-                }
-                .users{
-                    padding: 0.5rem;
+    .floor{
+        display: flex;
+        margin: 0.7rem;
+        .floor_title{
+            background: #C4C4C4;
+            color: rgba(0, 0, 0, 0.44);
+            height: inherit;
+            width: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .floor_list{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: -webkit-fill-available;
+            .room{
+                background: white;
+                border-bottom: 1px solid #d9d9d9;
+                .room_name{
                     text-align: center;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0.6rem;
+                    align-items: center;
+                    a{
+                        text-decoration: none;
+                        color: #FFDE31;
+                        background: #00000000;
+                        border: 2px solid #FFDE31;
+                        border-radius: 6px;
+                        padding: 0.3rem 0.7rem;
+                    
+                    }
+                }
+                .user{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0.5rem 1rem;
+                    .user_icon{
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 30px;
+                    }
+                    .users{
+                        padding: 0.5rem;
+                        text-align: center;
+                    }
                 }
             }
         }
-    }
-    .floor_title{
-        background: #1b4c7d;
-        color: #ececec;
-        text-align: center;
-        height: 2rem;
-        line-height: 2rem;
     }
 }

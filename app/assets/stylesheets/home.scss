@@ -38,7 +38,7 @@ position: absolute;
 height: 3px;/*線の太さ*/
 width: 25px;/*長さ*/
 border-radius: 3px;
-background: #555;
+background: #ffffffdd;
 display: block;
 content: '';
 cursor: pointer;
@@ -126,7 +126,7 @@ box-shadow: 6px 0 25px rgba(0,0,0,.15);
 .contents{
 	.map_area{
         width: 100vw;
-        background: #1640a1bd;
+        // background: #1640a1bd;
         .map_img{
             width: 100%;
         }
@@ -166,7 +166,7 @@ box-shadow: 6px 0 25px rgba(0,0,0,.15);
             right: 9.5vw;
         }
         a{
-            color: #004181;
+            color: #ffffffdd;
             text-decoration: none;
             font-size: 0.7rem;
             cursor: pointer;
@@ -190,7 +190,7 @@ box-shadow: 6px 0 25px rgba(0,0,0,.15);
                 border-bottom: 1px solid #7d7c7c2e;
                 padding: 1rem;
                 span{
-                    color: #000000c4;
+                    color: rgba(0, 0, 0, 0.6);
                     text-decoration: none;
                 }
             }

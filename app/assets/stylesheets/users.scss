@@ -1,3 +1,62 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile{
+    background: #ffffffdd;
+    margin: 0.7rem;
+    padding: 2rem;
+    border-radius: 4px;
+    display: flex;
+    flex-flow: column;
+    // color: rgba(0, 0, 0, 0.6);
+    .profile_name{
+        margin-top: 1rem;
+    }
+    .profile_student_number{
+        margin-top: 1rem;
+    }
+    .profile_room{
+        margin-top: 1rem;
+    }
+    .profile_comment{
+        margin-top: 1rem;
+    }
+}
+
+.save_btn{
+    color: #fff;
+    font-size: 1rem;
+    background: #FFCD37;
+    margin: 0.7rem;
+    padding: 0.7rem;
+    border-radius: 4px;
+    width: -webkit-fill-available;
+    height: 3rem;
+    border: none;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    .edit_btn, .back_btn{
+        background: #FFCD37;
+        margin: 0.7rem;
+        padding: 0.7rem;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .back_btn{
+        color: #FFCD37;
+        background: #ffffffdd;
+        border: 2px solid #FFCD37;
+        margin: 0.7rem;
+        margin-top: 0px;
+        padding: 0.7rem;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
