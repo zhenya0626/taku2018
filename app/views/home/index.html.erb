@@ -12,7 +12,7 @@
             
            
             <div><%= @location_room %></div>
-            <div><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></div>
+            <div class="logout_button"><%= link_to 'logout', destroy_user_session_path, method: :delete %></div>
             <div><%= link_to('編集',user_edit_path(id: current_user.id))%></div>
             
         </div>
@@ -22,7 +22,7 @@
 </div>
 <div class="contents">
     <div class="map_area">
-        <%= image_tag('map.svg', :class => "map_img") %>
+        <%= image_tag('map2.png', :class => "map_img") %>
         <div class="building kobo"><%= link_to "工房棟", :controller => "buildings", :action => "show", :id => 2 %></div>
         <div class="building kenkyu"><%= link_to "研究棟", :controller => "buildings", :action => "show", :id => 3 %></div>
         <div class="building kanri"><%= link_to "管理棟", :controller => "buildings", :action => "show", :id => 4 %></div>

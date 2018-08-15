@@ -18,15 +18,29 @@
      background: #E2E2E2; 
      color: rgba(0, 0, 0, 0.6);
  }
+ input, textarea{
+    -webkit-appearance: none; 
+ }
  
  /* sign_up */
+ .sign_in_form_wrapper, .sign_up_form_wrapper{
+    background: #FFCD37;
+    width: 100vw;
+    position: absolute;
+ }
+ .field{
+    margin-bottom: 1rem;
+ }
+ .field input{
+    border: 1px solid rgba(0, 0, 0, 0.21);
+    width: 100%;
+    border-radius: 4px;
+    height:1.5rem
+ }
 .sign_up_form, .sign_in_form{
     background: #ffffffcf;
     margin: 20vh 8vw;
     padding: 2rem;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
     border-radius: 6px;
 }
 .sign_up_form a, .sign_in_form a{
@@ -37,16 +51,17 @@
 .actions{
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 .actions input{
+    color: #fff;
     font-size: 1rem;
+    background: #FFCD37;
     padding: 0;
-    border: 1px solid #00000036;
     border-radius: 4px;
-    padding: 0.2rem 0.5rem;
-    color: #ffffff;
-    background: #8f8f8f;
+    width: -webkit-fill-available;
+    height: 3rem;
+    border: none;
 }
 
 .user_icon{

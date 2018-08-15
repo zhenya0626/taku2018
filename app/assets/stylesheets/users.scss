@@ -23,6 +23,44 @@
         margin-top: 1rem;
     }
 }
+.profile.edit{
+    .user_edit_form{
+        .image_wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 5rem;
+            .image_label{
+                color: #FFDE31;
+                background: #00000000;
+                border: 2px solid #FFDE31;
+                border-radius: 6px;
+                padding: 0.3rem 0.7rem;
+            }
+            .image{
+                -webkit-appearance: none; 
+            }
+        }
+        .comment{
+            border: 1px solid rgba(0, 0, 0, 0.21);
+            background: #00000000;
+            width: -webkit-fill-available;
+            border-radius: 4px;
+        }
+        .username_wrapper, .student_number_wrapper{
+            display: flex;
+            flex-flow: column;
+            height: 4rem;
+            input{
+                border: 1px solid rgba(0, 0, 0, 0.21);
+                background: #00000000;
+                border-radius: 4px;
+                height:1.5rem
+            }
+        }
+    }
+}
+
 
 .save_btn{
     color: #fff;

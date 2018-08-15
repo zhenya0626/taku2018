@@ -6,16 +6,29 @@
 <%= form_tag(user_update_path(@user.id), method: :post, multipart: true) do %>
     <div class="profile edit">
         <div class="user_edit_form">
-        <%= image_tag("/user_images/#{@user.icon_image_name}", :class => "user_icon") %>
-            <input name="image" type="file">
-            <div>芸工ネーム:</div>
-            <textarea name="username"><%= @user.username %></textarea>
-
-            <div>学籍番号:</div>
-            <textarea name="student_number"><%= @user.student_number %></textarea>
+            <div class="image_wrapper">
+                <%= image_tag("/user_images/#{@user.icon_image_name}", :class => "user_icon") %>
+                <label class="image_label" accept="image/*" for="file_photo">
+                    画像を選択
+                    <input class="image" name="image" type="file" id="file_photo" style="display:none;">
+                </label>
+                <img id="preview">
+            </div>
             
-            <div>コメント:</div>
-            <textarea name="comment"><%= @user.comment %></textarea>
+            <div class="username_wrapper">
+                <div >芸工ネーム</div>
+                <input name="username" value=<%= @user.username %>>
+            </div>
+             <div class="student_number_wrapper">
+                <div>学籍番号</div>
+                <input name="student_number" value=<%= @user.student_number %>>
+            </div>
+             <div class="comment_wrapper">
+                <div>コメント</div>
+                <textarea class="comment" name="comment"><%= @user.comment %></textarea>
+            </div>
+
+            
         </div>
     </div>
     <input class="save_btn" type="submit" value="save">
@@ -23,3 +36,14 @@
 <%= link_to(user_show_path(id: current_user.id)) do %>
         <div class="back_btn">cansel</div>
 <% end %>
+
+<script>
+$('#file_photo').on('change', function (e) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $("#preview").attr('src', e.target.result);
+    }
+    reader.readAsDataURL(e.target.files[0]);
+});
+</script>
+
