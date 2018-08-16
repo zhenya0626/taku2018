@@ -16,7 +16,7 @@
 
  body{
      background: #E2E2E2; 
-     color: rgba(0, 0, 0, 0.6);
+     color: rgba(0, 0, 0, 0.5);
  }
  input, textarea{
     -webkit-appearance: none; 
@@ -27,7 +27,16 @@
     background: #FFCD37;
     width: 100vw;
     position: absolute;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    min-height: 100vh;
  }
+ .sign_up_ttl, .sign_in_ttl {
+    font-size: 2rem;
+    color: #ffffffcc;
+    margin-top: 3rem;
+}
  .field{
     margin-bottom: 1rem;
  }
@@ -35,16 +44,18 @@
     border: 1px solid rgba(0, 0, 0, 0.21);
     width: 100%;
     border-radius: 4px;
-    height:1.5rem
+    height:1.5rem;
+    margin: 0.7rem 0 0 0;
  }
 .sign_up_form, .sign_in_form{
     background: #ffffffcf;
-    margin: 20vh 8vw;
+    margin: 6vh 8vw;
     padding: 2rem;
     border-radius: 6px;
+    text-align: center;
 }
 .sign_up_form a, .sign_in_form a{
-    color: #2b2b2b;
+    color: #FFCD37;
     text-decoration: none;
     font-size: 0.7rem;
 }

@@ -79,33 +79,96 @@ transition: .3s ease-in-out;
 
 /*中身*/
 #nav-content {
-padding: 1rem;
-overflow: auto;
-position: fixed;
-top: 0;
-left: 0;
-z-index: 9999;/*最前面に*/
-width: 70vw;/*右側に隙間を作る（閉じるカバーを表示）*/
-max-width: 330px;/*最大幅（調整してください）*/
-height: 100%;
-background: #ffca1c;
-transition: .3s ease-in-out;/*滑らかに表示*/
--webkit-transform: translateX(-105%);
-transform: translateX(-105%);/*左に隠しておく*/
-.icon_username{
-    line-height: 1;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    max-width: 330px;
+    height: 100%;
+    background: #ffffffdd;
+    transition: .3s ease-in-out;
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
     display: flex;
-    justify-content: stretch;
-    align-items: center;
-    .username{
-        margin-left: 1.5rem;
+    flex-flow: column;
+    align-items: space-between;
+    color: #00000077;
+    font-size: 1.2rem;
+    .user_wrapper{
+        display: flex;
+        flex-flow: column;
+        .icon_username{
+            line-height: 1;
+            display: flex;
+            justify-content: stretch;
+            align-items: center;
+            padding: 1rem;
+            .username{
+                margin-left: 1.5rem;
+            }
+            .user_icon{
+                width:3rem;
+                height:3rem;
+                border-radius: 30px;
+            }
+        }
+        .user_profiles{
+            display: flex;
+            flex-flow: column;
+            align-items: self-end;
+            margin-top: 1.5rem;
+            width: 100%;
+            background: #ffffff;
+            .user_profile{
+                font-size: 0.9rem;
+                height: 3rem;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #00000011;
+                width: 100%;
+                padding-right: 1rem;
+                padding-left: 1rem;
+                box-sizing: border-box;
+            }
+            .user_profile_ttl{
+                display: inline-block;
+                width: 4rem;
+                text-align: left;
+                font-size: 0.6rem;
+            }
+            .edit_button{
+                margin: 0 auto;
+                border: 1px solid #ffffff;
+                // border-radius: 4px;
+                height: 2.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                background: #ffffffdd;
+                a{
+                    color: #FFCD37;
+                }
+            }
+        }
     }
-    .user_icon{
-        width:3rem;
-        height:3rem;
-        border-radius: 30px;
+
+    .logout_button{
+        margin: 0 auto;
+        margin-top: 12rem;
+        // border-radius: 4px;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: #ffffffdd;
+        a{
+            color: #FFCD37;
+        }
     }
-}
+
 }
 
 /*チェックが入ったらもろもろ表示*/
@@ -122,7 +185,7 @@ box-shadow: 6px 0 25px rgba(0,0,0,.15);
 /*ドロワーメニュー-----------------------ここまで---*/
 .nav_bar{
 	width: 100%;
-	background: #ffca1c;
+	background: #FFCD37;
 	height: 4rem;
 	line-height: 4rem;
 	text-align: center;
@@ -202,9 +265,19 @@ box-shadow: 6px 0 25px rgba(0,0,0,.15);
                 align-items: center;
                 border-bottom: 1px solid #7d7c7c2e;
                 padding: 1rem;
+                .friend_li_icon_username{
+                    display: flex;
+                    align-items: center;
+                    .username{
+                        margin-left: 1rem;
+                    }
+                }
                 span{
                     color: rgba(0, 0, 0, 0.6);
                     text-decoration: none;
+                }
+                span.location{
+                    font-size: 0.7rem;
                 }
             }
         }

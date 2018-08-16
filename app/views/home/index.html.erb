@@ -5,15 +5,28 @@
         <label id="nav-open" for="nav-input"><span></span></label>
         <label class="nav-unshown" id="nav-close" for="nav-input"></label>
         <div id="nav-content">
-            <div class="icon_username">
-            <%= image_tag("/user_images/#{current_user.icon_image_name}", :class => "user_icon") %>
-                <span class="username"><%= current_user.username %></span>
+            <div class="user_wrapper">
+                <div class="icon_username">
+                <%= image_tag("/user_images/#{current_user.icon_image_name}", :class => "user_icon") %>
+                    <span class="username user_profile_data"><%= current_user.username %></span>
+                </div>
+                <div class="user_profiles">
+                    <div class="user_profile">
+                        <span class="user_profile_ttl">コメント</span>
+                        <span class="comment user_profile_data"><%= current_user.comment %></span>
+                    </div>
+                    <div class="user_profile">
+                        <span class="user_profile_ttl">学籍番号</span>
+                        <span class="student_number user_profile_data"><%= current_user.student_number %></span>
+                    </div>
+                    <div class="user_profile">
+                        <span class="user_profile_ttl">部屋</span>
+                        <span class="location_room user_profile_data"><%= @location_room %></span>
+                    </div>
+                    <div class="edit_button"><%= link_to('edit',user_edit_path(id: current_user.id))%></div>
+                </div>
             </div>
-            
-           
-            <div><%= @location_room %></div>
             <div class="logout_button"><%= link_to 'logout', destroy_user_session_path, method: :delete %></div>
-            <div><%= link_to('編集',user_edit_path(id: current_user.id))%></div>
             
         </div>
     </div>
@@ -37,9 +50,11 @@
             <% @users.each do |user| %>
                 <%= link_to(user_show_path(id: user.id)) do %>
                     <li class="friends_li">
-                    <%= image_tag("/user_images/#{user.icon_image_name}", :class => "user_icon") %>
-                        <span class="username"><%=user.username %></span>
-                        <span class="username"><%=user.location.room %></span>
+                        <span class="friend_li_icon_username">
+                            <%= image_tag("/user_images/#{user.icon_image_name}", :class => "user_icon") %>
+                            <span class="username"><%=user.username %></span>
+                        </span>
+                        <span class="location"><%=user.location.room %></span>
 
                     </li>
                 <% end %>
