@@ -21,6 +21,12 @@
  input, textarea{
     -webkit-appearance: none; 
  }
+ img.back_img {
+    width: 2rem;
+    margin-top: 1rem;
+    position: absolute;
+    left: 1rem;
+}
  
  /* sign_up */
  .sign_in_form_wrapper, .sign_up_form_wrapper{

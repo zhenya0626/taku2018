@@ -1,5 +1,5 @@
 <div class="nav_bar">
-    <span class="nav_link"><%= link_to 'back',  :controller => "home", :action => "index"  %></span>
+    <span class="nav_link"><%= link_to(:controller => "home", :action => "index") do %><%= image_tag('back.png', :class => "back_img") %><% end %></span>
     <span class="menu_text"><%= @building.name %></span>
     <span></span>
 </div>
