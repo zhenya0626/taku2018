@@ -1,0 +1,18 @@
+<% icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
+{
+  "name": "I am here",
+  "short_name": "IamHere",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "<%=image_path("taku2018_icon.png")%>", #アイコン
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "theme_color": "#FFCD37",
+  "background_color": "#FFFFFF",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
+
