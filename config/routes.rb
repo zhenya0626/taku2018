@@ -11,8 +11,6 @@ Rails.application.routes.draw do
   get 'user/:id/edit' => "users#edit" , as: 'user_edit'
   post 'user/:id/update' => "users#update" , as: 'user_update'
 
-
-
   get 'building/:id/show' => "buildings#show"
   post 'building/:location_id/:building_id' => "buildings#enter" , as: 'location_id'
   # get 'home/index'
