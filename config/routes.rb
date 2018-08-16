@@ -20,6 +20,18 @@ Rails.application.routes.draw do
   get '/' => "home#index"
 
 
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+  authenticated :users do
+      root :to => "home#index"
+  end
+
+  unauthenticated :users do
+      root :to => "home#index"
+ end
+
+
   # resources :users, only: [:show]
   resources :tasks
 end
