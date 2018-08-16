@@ -8,12 +8,12 @@
     <div class="profile edit">
         <div class="user_edit_form">
             <div class="image_wrapper">
-                <%= image_tag("/user_images/#{@user.icon_image_name}", :class => "user_icon") %>
+                <%= image_tag("/user_images/#{@user.icon_image_name}", :class => "user_icon", :id => "preview") %>
                 <label class="image_label" accept="image/*" for="file_photo">
                     画像を選択
                     <input class="image" name="image" type="file" id="file_photo" style="display:none;">
                 </label>
-                <img id="preview">
+                
             </div>
             
             <div class="username_wrapper">

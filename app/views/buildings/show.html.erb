@@ -12,7 +12,7 @@
                 <% @locations.each do |location| %>
                     <% if n == location.floor %>
                     <li class="room">
-                    <div class="room_name"><%= location.room %><%= link_to 'enter',  location_id_path(location_id:location.id, building_id: @building.id) , :method => :post %></div>
+                    <div class="room_name"><%= location.room %><%= button_to 'enter',  location_id_path(location_id:location.id, building_id: @building.id) , :method => :post %></div>
                     
                     <% @users.each do |user| %>
                         <% if user.location_id == location.id %>
