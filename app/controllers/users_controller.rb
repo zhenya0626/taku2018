@@ -13,13 +13,12 @@ class UsersController < ApplicationController
     @user.username = params[:username]
     @user.student_number = params[:student_number]
     @user.comment = params[:comment]
+
     if params[:image]
-      @extention = File.extname("hogehoge.rb")
-      @user.icon_image_name = "#{@user.id}.jpg"
       image = params[:image]
+      @extention = File.extname(image.original_filename)
+      @user.icon_image_name = "#{@user.id}.#{@extention}"
       File.binwrite("public/user_images/#{@user.icon_image_name}",image.read)
-      # @user.icon_image_name = "#{@user.id}.#{image_type("public/user_images/#{@user.icon_image_name}")}"
-      # File.binwrite("public/user_images/#{@user.icon_image_name}",image.read)
     end
 
     @user.save
